@@ -1,0 +1,61 @@
+import {
+  LayoutDashboard,
+  BookOpen,
+  GraduationCap,
+  ClipboardCheck,
+  Award,
+  FolderOpen,
+  MessageSquare,
+  User,
+  Bell,
+  PlusCircle,
+  Users,
+  BarChart3,
+  Network,
+  UserCog,
+  Layers,
+  ListChecks,
+  Megaphone,
+  FileBarChart,
+  Settings,
+  ShieldCheck,
+} from "lucide-react";
+
+export const traineeNav = [
+  { label: "Dashboard", to: "/trainee/dashboard", icon: LayoutDashboard },
+  { label: "My Learning", to: "/trainee/my-learning", icon: BookOpen },
+  { label: "Course Catalog", to: "/courses", icon: GraduationCap },
+  { label: "Assessments", to: "/trainee/assessments", icon: ClipboardCheck },
+  { label: "Certificates", to: "/trainee/certificates", icon: Award },
+  { label: "Verify Certificate", to: "/trainee/certificate-verification", icon: ShieldCheck },
+  { label: "Resources", to: "/trainee/resources", icon: FolderOpen },
+  { label: "Feedback", to: "/trainee/feedback", icon: MessageSquare },
+  { label: "Profile", to: "/trainee/profile", icon: User },
+  { label: "Notifications", to: "/trainee/notifications", icon: Bell },
+];
+
+export const trainerNav = [
+  { label: "Dashboard", to: "/trainer/dashboard", icon: LayoutDashboard },
+  { label: "My Courses", to: "/trainer/courses", icon: BookOpen },
+  { label: "Create Course", to: "/trainer/courses/create", icon: PlusCircle },
+  { label: "Trainer Library", to: "/trainer/library", icon: FolderOpen },
+  { label: "Assessments", to: "/trainer/assessments", icon: ClipboardCheck },
+  { label: "Trainees", to: "/trainer/trainees", icon: Users },
+  { label: "Performance", to: "/trainer/performance", icon: BarChart3 },
+  { label: "Competency", to: "/trainer/competency", icon: Network },
+  { label: "Profile", to: "/trainer/profile", icon: User },
+  { label: "Notifications", to: "/trainer/notifications", icon: Bell },
+];
+
+export const adminNav = [
+  { label: "Dashboard", to: "/admin/dashboard", icon: LayoutDashboard },
+  { label: "Users", to: "/admin/users", icon: UserCog },
+  { label: "Courses", to: "/admin/courses", icon: Layers },
+  { label: "Enrollments", to: "/admin/enrollments", icon: ListChecks },
+  { label: "Assessments", to: "/admin/assessments", icon: ClipboardCheck },
+  { label: "Competency Mapping", to: "/admin/competency", icon: Network },
+  { label: "Certifications", to: "/admin/certifications", icon: ShieldCheck },
+  { label: "Announcements", to: "/admin/announcements", icon: Megaphone },
+  { label: "Reports", to: "/admin/reports", icon: FileBarChart },
+  { label: "Settings", to: "/admin/settings", icon: Settings },
+];

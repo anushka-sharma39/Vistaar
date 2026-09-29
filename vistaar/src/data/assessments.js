@@ -1,0 +1,160 @@
+export const assessments = [
+  {
+    id: "a-01",
+    title: "Machine Learning Fundamentals Quiz",
+    courseId: "c-101",
+    course: "Foundations of Machine Learning",
+    questions: 10,
+    duration: 15,
+    deadline: "2026-10-05",
+    passingScore: 70,
+    attempts: 842,
+    status: "Published",
+  },
+  {
+    id: "a-02",
+    title: "Data Analytics Mid-Course Check",
+    courseId: "c-102",
+    course: "Applied Data Analytics for Decision Making",
+    questions: 12,
+    duration: 20,
+    deadline: "2026-10-12",
+    passingScore: 65,
+    attempts: 604,
+    status: "Published",
+  },
+  {
+    id: "a-03",
+    title: "Cybersecurity Essentials Final",
+    courseId: "c-108",
+    course: "Cybersecurity Essentials for Organizations",
+    questions: 15,
+    duration: 25,
+    deadline: "2026-10-18",
+    passingScore: 70,
+    attempts: 1204,
+    status: "Published",
+  },
+  {
+    id: "a-04",
+    title: "Leadership Capstone Evaluation",
+    courseId: "c-104",
+    course: "Strategic Leadership for Public Institutions",
+    questions: 10,
+    duration: 20,
+    deadline: "2026-10-25",
+    passingScore: 75,
+    attempts: 388,
+    status: "Draft",
+  },
+];
+
+export const sampleQuiz = {
+  id: "a-01",
+  title: "Machine Learning Fundamentals Quiz",
+  course: "Foundations of Machine Learning",
+  duration: 15,
+  passingScore: 70,
+  questions: [
+    {
+      id: 1,
+      text: "Which technology is commonly used for machine learning?",
+      options: ["HTML", "Python", "CSS", "SMTP"],
+      answer: 1,
+    },
+    {
+      id: 2,
+      text: "Which of these is a type of supervised learning problem?",
+      options: ["Clustering", "Classification", "Dimensionality Reduction", "Association Rule Mining"],
+      answer: 1,
+    },
+    {
+      id: 3,
+      text: "What does 'overfitting' mean in machine learning?",
+      options: [
+        "The model performs well on new, unseen data",
+        "The model is too simple to capture patterns",
+        "The model memorizes training data and performs poorly on new data",
+        "The model has too few parameters",
+      ],
+      answer: 2,
+    },
+    {
+      id: 4,
+      text: "Which library is widely used for numerical computing in Python?",
+      options: ["NumPy", "Django", "Bootstrap", "Express"],
+      answer: 0,
+    },
+    {
+      id: 5,
+      text: "What is the purpose of a training/test split?",
+      options: [
+        "To make the dataset smaller",
+        "To evaluate model performance on unseen data",
+        "To increase model complexity",
+        "To remove outliers automatically",
+      ],
+      answer: 1,
+    },
+    {
+      id: 6,
+      text: "Which metric is commonly used to evaluate classification models?",
+      options: ["Mean Squared Error", "Accuracy", "R-squared", "Standard Deviation"],
+      answer: 1,
+    },
+    {
+      id: 7,
+      text: "What does 'feature engineering' refer to?",
+      options: [
+        "Building physical hardware for ML",
+        "Creating and transforming input variables to improve model performance",
+        "Designing the user interface of an ML app",
+        "Writing unit tests for code",
+      ],
+      answer: 1,
+    },
+    {
+      id: 8,
+      text: "Which of these is an unsupervised learning technique?",
+      options: ["Linear Regression", "K-Means Clustering", "Logistic Regression", "Decision Trees"],
+      answer: 1,
+    },
+    {
+      id: 9,
+      text: "What is a 'hyperparameter'?",
+      options: [
+        "A parameter learned automatically during training",
+        "A configuration set before training that controls the learning process",
+        "The final output of a model",
+        "A type of neural network layer",
+      ],
+      answer: 1,
+    },
+    {
+      id: 10,
+      text: "Which of these best describes 'gradient descent'?",
+      options: [
+        "A data visualization technique",
+        "An optimization algorithm used to minimize a loss function",
+        "A method for cleaning datasets",
+        "A type of database query",
+      ],
+      answer: 1,
+    },
+  ],
+};
+
+export const upcomingAssessments = [
+  { id: "a-01", title: "Machine Learning Fundamentals Quiz", course: "Foundations of Machine Learning", questions: 10, deadline: "5 Oct 2026", status: "Not Started" },
+  { id: "a-02", title: "Data Analytics Mid-Course Check", course: "Applied Data Analytics", questions: 12, deadline: "12 Oct 2026", status: "In Progress" },
+  { id: "a-03", title: "Cybersecurity Essentials Final", course: "Cybersecurity Essentials", questions: 15, deadline: "18 Oct 2026", status: "Not Started" },
+];
+
+export const traineePerformance = [
+  { id: "u-1001", name: "Aditi Rao", course: "Foundations of Machine Learning", completion: 82, score: 88, lastActivity: "2 hours ago", status: "On Track" },
+  { id: "u-1002", name: "Sameer Khan", course: "Foundations of Machine Learning", completion: 45, score: 62, lastActivity: "1 day ago", status: "At Risk" },
+  { id: "u-1004", name: "Rahul Bhatt", course: "Applied Data Analytics", completion: 95, score: 91, lastActivity: "3 hours ago", status: "On Track" },
+  { id: "u-1005", name: "Sanya Malhotra", course: "Applied Data Analytics", completion: 20, score: 40, lastActivity: "6 days ago", status: "At Risk" },
+  { id: "u-1006", name: "Ishaan Gupta", course: "Foundations of Machine Learning", completion: 70, score: 76, lastActivity: "5 hours ago", status: "On Track" },
+  { id: "u-1007", name: "Divya Menon", course: "Deep Learning with Neural Networks", completion: 12, score: 0, lastActivity: "2 weeks ago", status: "Not Started" },
+];

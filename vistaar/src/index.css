@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Certificate template fonts (also embedded into the downloaded PDF) */
+@font-face { font-family: "CertSans"; font-weight: 400; font-style: normal; font-display: swap; src: url("./assets/fonts/Sans-Regular.ttf") format("truetype"); }
+@font-face { font-family: "CertSans"; font-weight: 700; font-style: normal; font-display: swap; src: url("./assets/fonts/Sans-Bold.ttf") format("truetype"); }
+@font-face { font-family: "CertSerif"; font-weight: 700; font-style: normal; font-display: swap; src: url("./assets/fonts/Serif-Bold.ttf") format("truetype"); }
+@font-face { font-family: "CertSerif"; font-weight: 400; font-style: italic; font-display: swap; src: url("./assets/fonts/Serif-Italic.ttf") format("truetype"); }
+@font-face { font-family: "CertScript"; font-weight: 400; font-style: normal; font-display: swap; src: url("./assets/fonts/Script.ttf") format("truetype"); }
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body { overflow-x: clip; }
+
+body {
+  background-color: #F7F8FC;
+  background-image: radial-gradient(rgba(124,58,237,0.055) 1px, transparent 1px);
+  background-size: 24px 24px;
+  font-feature-settings: "cv11", "ss01";
+  @apply text-ink-800 font-sans antialiased;
+}
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(55% 45% at 92% 0%, rgba(139,92,246,0.12), transparent 70%),
+    radial-gradient(45% 40% at 0% 100%, rgba(34,211,238,0.10), transparent 70%);
+}
+
+h1, h2, h3, h4, h5 { @apply font-display text-ink-900 tracking-tight; text-wrap: balance; }
+p { text-wrap: pretty; }
+::selection { background: #DDD6FE; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #D3D8E8; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #A9B0C9; }
+
+.focus-ring { @apply outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 focus-visible:ring-offset-canvas; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Soft-glass surface */
+.glass-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.80));
+  -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+  border: 1px solid rgba(124,58,237,0.09);
+  border-radius: 22px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 1px 2px rgba(11,16,32,0.04), 0 14px 32px -18px rgba(60,40,140,0.18);
+}
+.page-enter { animation: pageIn .38s cubic-bezier(.22,1,.36,1) both; }
+@keyframes pageIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.mesh-violet {
+  background:
+    radial-gradient(60% 55% at 15% 10%, rgba(139,92,246,0.55), transparent 65%),
+    radial-gradient(55% 50% at 90% 85%, rgba(34,211,238,0.35), transparent 65%),
+    radial-gradient(45% 40% at 70% 20%, rgba(244,114,182,0.22), transparent 70%),
+    linear-gradient(135deg, #0B1020 0%, #1C0F45 100%);
+}
+.eyebrow { @apply inline-flex items-center gap-2 text-xs font-semibold tracking-[0.14em] uppercase text-indigo-600; }
+.eyebrow::before { content: ""; width: 18px; height: 2px; border-radius: 2px; background: linear-gradient(90deg,#7C3AED,#22D3EE); }
+.bg-grid {
+  background-image: linear-gradient(rgba(11,16,32,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(11,16,32,0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(70% 60% at 50% 30%, #000 30%, transparent 100%);
+  mask-image: radial-gradient(70% 60% at 50% 30%, #000 30%, transparent 100%);
+}
+.text-gradient { background-image: linear-gradient(135deg, #7C3AED, #22D3EE); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+@media (prefers-reduced-motion: reduce) { *, ::before, ::after { animation: none !important; transition-duration: .01ms !important; } }
+
+/* Scrapbook home hero */
+.paper-bg { background-color: #FAF7F0; background-image: radial-gradient(rgba(76,29,149,0.06) 1px, transparent 1px); background-size: 24px 24px; }
+.font-serif-display { font-family: 'Newsreader', Georgia, serif; }
+.font-hand { font-family: 'Caveat', 'Segoe Print', cursive; }
+.tape { background: rgba(167,139,250,0.55); box-shadow: 0 1px 2px rgba(11,16,32,.08); }
+.squiggle-hl { background: linear-gradient(transparent 12%, rgba(196,181,253,0.55) 12%, rgba(196,181,253,0.55) 88%, transparent 88%); border-radius: 14px 40px 12px 36px; padding: 0 .35em; margin-left: -.35em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+
+/* Navbar uses Times New Roman everywhere */
+.nav-times, .nav-times * { font-family: "Times New Roman", Times, serif !important; }
